@@ -89,8 +89,17 @@ void arithmeticExpression::postfix() {
     postfix(root);
 }
 
-void arithmeticExpression::visualizeTree(ofstream &, TreeNode *) {
-    cout << "(RECURSIVE)VISUALTREE(): STILL NEED TO WORK ON" << endl;
+void arithmeticExpression::visualizeTree(ofstream & oss, TreeNode * start) {
+    TreeNode* curr = start;
+
+    if(curr->left == NULL && curr->right == NULL) {
+        return;
+    } else {
+        oss << "    key" << curr->key << " -> key" << curr->left->key << ";" << endl;
+        oss << "    key" << curr->key << " -> key" << curr->right->key << ";" << endl;
+        visualizeTree(oss, curr->left);
+        visualizeTree(oss, curr->right);
+    }
 }
 
 arithmeticExpression::arithmeticExpression(const string & input) {

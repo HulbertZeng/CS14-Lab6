@@ -11,7 +11,7 @@ int main(){
     cout<<"infix: "; ex1.infix(); cout<<endl;
     cout<<"prefix: "; ex1.prefix(); cout<<endl;
     cout<<"postfix: "; ex1.postfix(); cout<<endl;
-    //ex1.visualizeTree("expr1.dot");
+    ex1.visualizeTree("expr1.dot");
     cout<<endl;
 
     string expr2 = "(a+b)*(c-d)";
@@ -21,7 +21,7 @@ int main(){
     cout<<"infix: "; ex2.infix(); cout<<endl;
     cout<<"prefix: "; ex2.prefix(); cout<<endl;
     cout<<"postfix: "; ex2.postfix(); cout<<endl;
-    //ex2.visualizeTree("expr2.dot");
+    ex2.visualizeTree("expr2.dot");
     cout<<endl;
 
     string expr3 = "a + b * c - ( d * e + f ) * g";
@@ -31,7 +31,7 @@ int main(){
     cout<<"infix: "; ex3.infix(); cout<<endl;
     cout<<"prefix: "; ex3.prefix(); cout<<endl;
     cout<<"postfix: "; ex3.postfix(); cout<<endl;
-    //ex3.visualizeTree("expr3.dot");
+    ex3.visualizeTree("expr3.dot");
     cout<<endl;
 
     return 0;
